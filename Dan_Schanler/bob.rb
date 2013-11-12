@@ -5,9 +5,9 @@ class Bob
   # end
 
   def hey(message)
-    if message.lstrip.empty? 
+    if message.strip.empty? 
       'Fine. Be that way!'
-    elsif message == message.upcase
+    elsif message == message.upcase && message.match(/[a-zA-Z]/)
       'Woah, chill out!'
     elsif message.end_with?('?') 
         'Sure.' 
@@ -17,6 +17,3 @@ class Bob
   end
 
 end
-
-#if message.match('/[^0-9][^a-zA-Z]/') 
-# && message.match('/[^0-9]/')
